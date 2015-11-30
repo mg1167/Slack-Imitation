@@ -1,0 +1,59 @@
+<head>
+    <meta charset = "UTF-8">
+	<title>myapp</title>
+</head>
+
+<body>
+	<div class = "centered" id="slider">
+		<figure>
+			<img src = "http://bayside.progressionstudios.com/wp-content/uploads/2013/02/shutterstock_120348208-1500x575.jpg" alt="rest">
+			<img src = "http://www.nextguide.co.uk/wp-content/uploads/2014/02/Social-media-Keyboard-1500x575.jpg" alt="rest">		
+			<img src = "http://zona55.es/imagenes/appmovilfidelityapps.png" alt="rest">
+			<img src = "http://www.amongtech.com/wp-content/uploads/5-1500x575.jpg" alt="rest">
+			<img src = "http://www.nextguide.co.uk/wp-content/uploads/2014/02/Social-media-Keyboard-1500x575.jpg" alt="rest">
+			<img src = "http://www.amongtech.com/wp-content/uploads/5-1500x575.jpg" alt="rest">
+		</figure>
+	</div>
+	<div class = "jumbotron">
+		<div class = "centered">
+			<h1>Meteor Slack!</h1>
+			<h3>Cognits Organization</h3>
+			<h4>Version 1.0.0</h4>
+		</div>
+	</div>
+	<div class = "centered">
+		{{#if currentUser}}
+			{{> dashboard}}
+		{{else}}
+			{{> register}}
+			{{> login}}
+		{{/if}}
+	</div>
+</body>
+<template name = "register">
+	<form>
+		<input type = "text" placeholder = "E-mail" id = "email">
+		<input type = "password" placeholder = "password" id = "password">
+		<input type = "submit" value = "Register">
+	</form>
+</template>
+
+<template name = "login">
+	<form>
+		<input type = "text" placeholder = "E-mail" id = "login-email">
+		<input type = "password" placeholder = "password" id = "login-password">
+		<input type = "submit" value = "Login">
+	</form>	
+</template>
+
+<template name = "dashboard">
+	<p>You're logged in!</p>
+	<p><a href="#" class = "logout">Logout</a></p>
+</template>
+
+<template name = "clear">
+
+</template>
+  
+ <!-- Documentación de Meteor -->
+<!-- docs.meteor.com/#meteor_loginwithpassword -->
